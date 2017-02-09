@@ -26,7 +26,7 @@ abstract class VoteManager implements VoteManagerInterface
      * @param UserInterface $voter
      * @return \DCS\RatingBundle\Model\VoteInterface
      */
-    public function createVote(RatingInterface $rating, UserInterface $voter)
+    public function createVote(RatingInterface $rating, $voter)
     {
         $class = $this->getClass();
         $vote = new $class;
@@ -45,7 +45,7 @@ abstract class VoteManager implements VoteManagerInterface
      * @param \Symfony\Component\Security\Core\User\UserInterface $voter
      * @return VoteInterface
      */
-    public function findOneByRatingAndVoter(RatingInterface $rating, UserInterface $voter)
+    public function findOneByRatingAndVoter(RatingInterface $rating, $voter)
     {
         return $this->findOneBy(array(
             'rating' => $rating,

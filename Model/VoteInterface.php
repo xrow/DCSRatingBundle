@@ -62,7 +62,7 @@ interface VoteInterface
      * @param UserInterface $user
      * @return SignedVoteInterface
      */
-    public function setVoter(\Symfony\Component\Security\Core\User\UserInterface $voter);
+    public function setVoter( $voter);
 
     /**
      * Gets the owner of the vote

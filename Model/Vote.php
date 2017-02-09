@@ -129,7 +129,7 @@ abstract class Vote implements VoteInterface
      * @param \Symfony\Component\Security\Core\User\UserInterface $voter
      * @return VoteInterface
      */
-    public function setVoter(\Symfony\Component\Security\Core\User\UserInterface $voter)
+    public function setVoter($voter)
     {
         $this->voter = $voter;
 

@@ -13,7 +13,7 @@ interface VoteManagerInterface
      * @param \Symfony\Component\Security\Core\User\UserInterface $voter
      * @return VoteInterface
      */
-    public function findOneByRatingAndVoter(RatingInterface $rating, UserInterface $voter);
+    public function findOneByRatingAndVoter(RatingInterface $rating, $voter);
 
     /**
      * Finds votes by the given criteria
@@ -38,7 +38,7 @@ interface VoteManagerInterface
      * @param UserInterface $voter
      * @return VoteInterface
      */
-    public function createVote(RatingInterface $rating, UserInterface $voter);
+    public function createVote(RatingInterface $rating, $voter);
 
     /**
      * Save or update vote
